@@ -4,6 +4,9 @@ def print_items(n):
     for i in range(n):
         print(i)
 
+
+
+
 print_items(5)
 print('*' * 50)
 
@@ -15,9 +18,9 @@ def print_items(n):
     for j in range(n):
         print(j)
 
+
 print_items(5)
 print('*' * 50)
-'''
 
 # O(n * n) / O(N squared) / O(n2)
 def print_items(n):
@@ -27,3 +30,15 @@ def print_items(n):
 
 print_items(5)
 print('*' * 50)
+
+print()
+
+
+'''
+
+# O(1)
+
+def add_items(n):
+    return n + n
+
+print(add_items(5))
