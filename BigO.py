@@ -31,6 +31,7 @@ def print_items(n):
 print_items(5)
 print('*' * 50)
 
+print()
 
 
 '''
