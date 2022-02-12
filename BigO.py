@@ -15,6 +15,7 @@ def print_items(n):
     for j in range(n):
         print(j)
 
+
 print_items(5)
 print('*' * 50)
 '''
