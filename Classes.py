@@ -11,6 +11,8 @@ class Cookie:
     def set_color(self):
         self.color = color
 
+
+
 cookie_one = Cookie('Green')
 print(cookie_one.get_color())
 
