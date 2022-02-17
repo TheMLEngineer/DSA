@@ -8,7 +8,7 @@ class Cookie:
         self.color = color
     def get_color(self):
         return self.color
-    def set_color(self):
+    def set_color(self , color):
         self.color = color
 
 
@@ -16,8 +16,13 @@ class Cookie:
 
 
 cookie_one = Cookie('Green')
-print(cookie_one.get_color())
-
 cookie_two = Cookie('Red')
+
+print(cookie_one.get_color())
 print(cookie_two.get_color())
+
+cookie_one.set_color('Wheatish Brown')
+print(cookie_one.get_color())
+print(cookie_two.get_color())
+
 
