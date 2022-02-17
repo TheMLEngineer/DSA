@@ -73,7 +73,16 @@ class LinkedList:
         temp = self.head
         for _ in range(index):
             temp = temp.next
-        return temp.value
+        return temp
+
+    def set_value(self , index , value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        else:
+            return False
+
  
 my_linked_list = LinkedList(1)
 
@@ -93,6 +102,12 @@ print('*' * 50)
 
 my_linked_list.pop_first()
 my_linked_list.print_list()
+
+print('*' * 50)
+my_linked_list.set_value(1 , 33)
+my_linked_list.print_list() 
+print('*' * 50)
+
 
 '''print('*' * 50)
 print(my_linked_list.pop())
