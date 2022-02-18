@@ -73,7 +73,61 @@ class LinkedList:
         temp = self.head
         for _ in range(index):
             temp = temp.next
-        return temp.value
+        return temp
+
+    def set_value(self , index , value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        else:
+            return False
+
+    def insert(self , index , value):
+        if index < 0 or index > self.length:
+            return False
+        if index == 0:
+            return self.prepend(value)
+        if index == self.length:
+            return self.append(value)
+        new_node = Node(value)
+        temp = self.get(index - 1)
+        new_node.next = temp.next
+        temp.next = new_node
+        self.length += 1
+        return True
+
+    def remove(self , index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length - 1:
+            return self.pop()
+        pre = self.get(index - 1)
+        temp = pre.next
+        pre.next = temp.next
+        temp.next = None
+        self.length -= 1
+        return temp
+
+    def reverse(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        after = temp.next
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
+
+
+
+
+
+
  
 my_linked_list = LinkedList(1)
 
@@ -93,6 +147,20 @@ print('*' * 50)
 
 my_linked_list.pop_first()
 my_linked_list.print_list()
+
+print('*' * 50)
+my_linked_list.set_value(1 , 33)
+my_linked_list.print_list() 
+print('*' * 50)
+my_linked_list.insert(index=2 , value=345)
+my_linked_list.print_list() 
+print('*' * 50)
+my_linked_list.remove(index=2)
+my_linked_list.print_list() 
+print('*' * 50)
+my_linked_list.reverse()
+my_linked_list.print_list() 
+print('*' * 50)
 
 '''print('*' * 50)
 print(my_linked_list.pop())
