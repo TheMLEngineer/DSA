@@ -7,7 +7,7 @@
             "driver": "PostgreSQL",
             "name": "DVD",
             "database": "dvdrental",
-            "username": "deku",
+            "username": "postgres",
             "password": "deku"
         }
     ]
