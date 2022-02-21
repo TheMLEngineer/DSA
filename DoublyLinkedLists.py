@@ -172,6 +172,6 @@ my_doubly_linked_list.insert(0 , 22)
 my_doubly_linked_list.print_list()
 print('*'* 50)
 
-my_doubly_linked_list.remove(0)
+print(my_doubly_linked_list.remove(0).value , end = '\n')
 my_doubly_linked_list.print_list()
 print('*'* 50)
