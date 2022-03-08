@@ -24,6 +24,16 @@ class Stack:
             self.top = new_node
         self.height += 1
 
+    def pop(self):
+        if self.height == 0:
+            return None
+        temp = self.top
+        self.top = self.top.next
+        temp.next = None
+        self.height -= 1
+        return temp.value
+
+
 
 
 my_stack = Stack(3)
@@ -31,6 +41,9 @@ my_stack.print_stack()
 
 print('*' * 50)
 my_stack.push(55)
+my_stack.print_stack()  
+print('*' * 50)
+my_stack.pop()
 my_stack.print_stack()  
 print('*' * 50)
 
