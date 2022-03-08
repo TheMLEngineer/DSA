@@ -38,7 +38,7 @@ class Queue:
             self.first = self.first.next
             temp.next = None
 
-        return temp.value
+        return temp
 
 
 
