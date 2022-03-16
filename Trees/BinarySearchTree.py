@@ -9,4 +9,4 @@ class BinarySearchTree:
         self.root = None
 
 my_tree = BinarySearchTree()
-print(my_tree.root)
+print(my_tree.root) 
