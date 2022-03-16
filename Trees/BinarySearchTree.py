@@ -27,14 +27,14 @@ class BinarySearchTree:
                 if temp.left is None:
                     temp.left = new_node
                     return True
-                # If the point to add value is not in current left level , we are poining to next left level
+                # If the point to add value is not in current left level , we are pointing to next left level
                 temp = temp.left
             # Adding element in right side
             else:
                 if temp.right is None:
                     temp.right = new_node
                     return True
-                # If the point to add value is not in current right level , we are poining to next right level
+                # If the point to add value is not in current right level , we are pointing to next right level
                 temp = temp.right
 
 
