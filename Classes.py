@@ -12,6 +12,9 @@ class Cookie:
         self.color = color
 
 
+
+
+
 cookie_one = Cookie('Green')
 cookie_two = Cookie('Red')
 

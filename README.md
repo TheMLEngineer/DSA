@@ -1,1 +1,1 @@
-# Practice Repo for Data Structures and Algorithms in Python
+# Practice Repository for Data Structures and Algorithms in Python
