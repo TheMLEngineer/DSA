@@ -51,6 +51,14 @@ class BinarySearchTree:
         # When item not found in while loop , the while loop breaks and it returns false
         return False
 
+    def min_value_node(self , current_node):
+        while current_node.left is not None:
+            current_node = current_node.left
+        # If we need node value
+        # return current_node.value
+        # returning node
+        return current_node
+
 
 
 print('*' * 50)
@@ -70,6 +78,7 @@ print('*' * 50)
 
 print(my_tree.contains(3))
 print('*' * 50)
-
+print(my_tree.min_value_node(my_tree.root))
+print('*' * 50)
 
 
