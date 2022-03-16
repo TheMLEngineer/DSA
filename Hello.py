@@ -1,5 +1,5 @@
 
-print('*' * 50)
+print('*' * 100)
 
 
 
@@ -18,4 +18,4 @@ print('Hello')
 
 
 
-print('*' * 50)
+print('*' * 100)
