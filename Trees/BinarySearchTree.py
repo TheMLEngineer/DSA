@@ -27,15 +27,38 @@ class BinarySearchTree:
                 if temp.left is None:
                     temp.left = new_node
                     return True
-                # If the point to add value is not in current left side , we are poining to next left side
+                # If the point to add value is not in current left level , we are pointing to next left level
                 temp = temp.left
             # Adding element in right side
             else:
                 if temp.right is None:
                     temp.right = new_node
                     return True
-                # If the point to add value is not in current right side , we are poining to next right side
+                # If the point to add value is not in current right level , we are pointing to next right level
                 temp = temp.right
+
+    def contains(self , value):
+        if self.root is None:
+            return False
+        temp = self.root
+        while temp is not None:
+            if value < temp.value:
+                temp = temp.left
+            elif value > temp.value:
+                temp = temp.right
+            else:
+                return True
+        # When item not found in while loop , the while loop breaks and it returns false
+        return False
+
+    def min_value_node(self , current_node):
+        while current_node.left is not None:
+            current_node = current_node.left
+        # If we need node value
+        # return current_node.value
+        # returning node
+        return current_node
+
 
 
 print('*' * 50)
@@ -53,5 +76,9 @@ print(my_tree.root.left.value)
 print(my_tree.root.right.value)
 print('*' * 50)
 
+print(my_tree.contains(3))
+print('*' * 50)
+print(my_tree.min_value_node(my_tree.root))
+print('*' * 50)
 
 
