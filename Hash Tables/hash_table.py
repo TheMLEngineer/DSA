@@ -37,8 +37,8 @@ class HashTable:
                     return self.data_map[index][i][1]
         return None
 
+    
     def keys(self):
-        print(self.data_map)
         k = []
         for index in self.data_map:
             if index is not None:
@@ -46,10 +46,8 @@ class HashTable:
                     k.append(l1[0])
         print(k)
         return k
-
-
         
-        
+
 my_hash_table = HashTable()
 my_hash_table.print_table()
 
@@ -61,7 +59,12 @@ print('*'* 50)
 val = my_hash_table.get_item('3')
 print(val)
 print('*'* 50)
+my_hash_table = HashTable()
+my_hash_table.set_item('bolts', 1400)
+my_hash_table.set_item('washers', 50)
+my_hash_table.set_item('lumber', 70)
 my_hash_table.keys()
+print('*'* 50)
 
 
 
