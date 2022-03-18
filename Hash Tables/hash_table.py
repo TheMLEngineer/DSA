@@ -1,3 +1,6 @@
+import enum
+
+
 class HashTable:
     # Size is 7 coz we have 6  adrees space blocks (For example)
     def __init__(self , size = 7) -> None:
@@ -15,4 +18,12 @@ class HashTable:
             my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
 
         return my_hash
+
+    def print_table(self):
+        for i , val in enumerate(self.data_map):
+            print(i , ' : ' , val)
+
+        
+my_hash_table = HashTable()
+my_hash_table.print_table()
         
