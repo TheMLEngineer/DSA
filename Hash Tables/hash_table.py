@@ -37,6 +37,17 @@ class HashTable:
                     return self.data_map[index][i][1]
         return None
 
+    def keys(self):
+        print(self.data_map)
+        k = []
+        for index in self.data_map:
+            if index is not None:
+                for l1 in index:
+                    k.append(l1[0])
+        print(k)
+        return k
+
+
         
 my_hash_table = HashTable()
 my_hash_table.print_table()
@@ -49,6 +60,7 @@ print('*'* 50)
 val = my_hash_table.get_item('3')
 print(val)
 print('*'* 50)
+my_hash_table.keys()
 
 
 
