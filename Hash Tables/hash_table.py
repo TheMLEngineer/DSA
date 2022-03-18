@@ -29,15 +29,27 @@ class HashTable:
             self.data_map[index] = []
         self.data_map[index].append([key , value])
 
+    def get_item(self , key):
+        index = self.__hash(key)
+        if self.data_map[index] is not None:
+            for i in range(len(self.data_map[index])):
+                if self.data_map[index][i][0] == key:
+                    return self.data_map[index][i][1]
+        return None
+
         
 my_hash_table = HashTable()
 my_hash_table.print_table()
 
 print('*'* 50)
-# Key should b a string
+# Key should b a string (Based on how we configured)
 my_hash_table.set_item( '3' , 'Deku')
 my_hash_table.print_table()
 print('*'* 50)
+val = my_hash_table.get_item('3')
+print(val)
+print('*'* 50)
+
 
 
         
