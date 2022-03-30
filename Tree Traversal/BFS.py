@@ -63,24 +63,3 @@ class BinarySearchTree:
 
 
 
-print('*' * 50)
-
-my_tree = BinarySearchTree()
-print(my_tree.root) 
-
-print('*' * 50)
-my_tree.insert(2)
-my_tree.insert(1)
-my_tree.insert(3)
-
-print(my_tree.root.value)
-print(my_tree.root.left.value)
-print(my_tree.root.right.value)
-print('*' * 50)
-
-print(my_tree.contains(3))
-print('*' * 50)
-print(my_tree.min_value_node(my_tree.root))
-print('*' * 50)
-
-
