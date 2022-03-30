@@ -71,6 +71,20 @@ class BinarySearchTree:
                 queue.append(current_node.left)
             if current_node.right is not None:
                 queue.append(current_node.right)
+        return results
+
+
+
+my_tree = BinarySearchTree()
+my_tree.insert(47)
+my_tree.insert(21)
+my_tree.insert(76)
+my_tree.insert(18)
+my_tree.insert(27)
+my_tree.insert(52)
+my_tree.insert(82)
+
+print(my_tree.BFS())
 
     
 
