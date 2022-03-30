@@ -11,8 +11,20 @@ def pivot(mylist , pivot_index , end_index):
     swap(mylist , pivot_index , swap_index)
     return swap_index
 
+def quick_sort(mylist , left , right):
+    # Base Case is if left < right
+    if left < right:
+        pivot_index = pivot(mylist , left , right)
+        # Using Recursion
+        quick_sort(mylist , left , pivot_index - 1)
+        quick_sort(mylist , pivot_index + 1 , right)
+    return mylist
+
 l = [9,3,2,5,7,3,55]
-print(pivot(l , 0 , 6))
+
+print(quick_sort(l , 0 , 6))
+
+#print(pivot(l , 0 , 6))
 
 # After running pivot checking list
-print(l)
+#print(l)
